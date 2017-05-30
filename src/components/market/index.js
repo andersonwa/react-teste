@@ -6,7 +6,7 @@ class PrevNavButton extends Component {
   render() {
     return (
       <div role="button" className="slick-control prev" onClick={this.props.onClick}>
-        <i className="fa fa-3x fa-angle-left" />
+        <i className="ico arrow-left" />
       </div>
     );
   }
@@ -16,7 +16,7 @@ class NextNavButton extends Component {
   render() {
     return (
       <div role="button" className="slick-control next" onClick={this.props.onClick}>
-        <i className="fa fa-3x fa-angle-right" />
+        <i className="ico arrow-right" />
       </div>
     );
   }
@@ -35,7 +35,7 @@ class Index extends Component {
   renderProducts() {
     return this.state.products.map((product, key) => {
       return (
-        <div className="item" key={key}>
+        <a className="item" key={key}>
           <div className="item-img">
             <img src={product.images.default} alt="" />
           </div>
@@ -52,7 +52,7 @@ class Index extends Component {
             <button type="button" className="btn-buy"><span className="ico-market"></span> Comprar</button>
             <button type="button" className="economize">Economize{product.economy}</button>
           </div>
-        </div>
+        </a>
       )
     })
   }
@@ -70,6 +70,9 @@ class Index extends Component {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
+      swipeToSlide: false,
+      accessibility: false,
+      touchMove: false,
       responsive: [
         { breakpoint: 768, settings: { slidesToShow: 3 } },
         { breakpoint: 1024, settings: { slidesToShow: 4 } }

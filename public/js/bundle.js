@@ -27436,7 +27436,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { role: 'button', className: 'slick-control prev', onClick: this.props.onClick },
-	        _react2.default.createElement('i', { className: 'fa fa-3x fa-angle-left' })
+	        _react2.default.createElement('i', { className: 'ico arrow-left' })
 	      );
 	    }
 	  }]);
@@ -27459,7 +27459,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { role: 'button', className: 'slick-control next', onClick: this.props.onClick },
-	        _react2.default.createElement('i', { className: 'fa fa-3x fa-angle-right' })
+	        _react2.default.createElement('i', { className: 'ico arrow-right' })
 	      );
 	    }
 	  }]);
@@ -27498,7 +27498,7 @@
 	    value: function renderProducts() {
 	      return this.state.products.map(function (product, key) {
 	        return _react2.default.createElement(
-	          'div',
+	          'a',
 	          { className: 'item', key: key },
 	          _react2.default.createElement(
 	            'div',
@@ -27583,6 +27583,9 @@
 	        speed: 500,
 	        slidesToShow: 4,
 	        slidesToScroll: 1,
+	        swipeToSlide: false,
+	        accessibility: false,
+	        touchMove: false,
 	        responsive: [{ breakpoint: 768, settings: { slidesToShow: 3 } }, { breakpoint: 1024, settings: { slidesToShow: 4 } }],
 	        prevArrow: _react2.default.createElement(PrevNavButton, null),
 	        nextArrow: _react2.default.createElement(NextNavButton, null)

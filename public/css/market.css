@@ -5,6 +5,8 @@
   border-right: 1px solid #e1e1e1;
   padding: 0px 35px;
   text-align: center; }
+  .market .item:hover {
+    background-color: yellow; }
 
 .market .item:last-child {
   border-right: none; }
@@ -57,6 +59,22 @@
 
 .market .ico-market {
   background-image: url(../images/icons/carrinho.png);
+  width: 20px;
+  background-size: contain;
+  height: 15px;
+  background-repeat: no-repeat;
+  display: inline-block; }
+
+.arrow-left {
+  background-image: url(../images/icons/seta_esquerda_amarelo.png);
+  width: 20px;
+  background-size: contain;
+  height: 15px;
+  background-repeat: no-repeat;
+  display: inline-block; }
+
+.arrow-right {
+  background-image: url(../images/icons/seta_direita_amarelo.png);
   width: 20px;
   background-size: contain;
   height: 15px;
