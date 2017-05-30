@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: arial;
+}
+
+@import 'node_modules/slick-carousel/slick/slick.scss';
+
+input[placeholder], [placeholder], *[placeholder] {
+    color: black !important;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@import 'header';
+@import 'slide';
+@import 'market';
+@import 'footer';
+
+@media (max-width: 992px) {
+  header .container {
+    display: block;
+    align-items: initial;
+    justify-content: initial;
+  }
+
+  header .logo-login {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  header .brands-phone {
+    display: none;
+  }
+
+  header .search {
+    margin-top: 20px;
+  }
+
+  header input {
+    width: 100%!important;
+    border-radius: 0!important;
+  }
+
+  .market {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "products":[
+    {
+      "name": "Sandália Ferracini Ecologic",
+      "amount": "R$ 95,92",
+      "max_installments": "4X",
+      "old_amount": null,
+      "price_installments": "R$ 23,98",
+      "images": {
+          "default": "images/sapatos/calcado1.png",
+          "hover": "images/sapatos/calcado1_hover.png",
+          "zoom": "images/sapatos/calcado1_zoom.png"
+      },
+      "economy": "R$ 43,98"
+    },
+    {
+      "name": "Chinelo Kildare",
+      "amount": "R$ 79,92",
+      "max_installments": "3X",
+      "old_amount": "R$ 99,90",
+      "price_installments": "R$ 26,64",
+      "images": {
+          "default": "images/sapatos/calcado2.png",
+          "hover": "images/sapatos/calcado2_hover.png",
+          "zoom": "images/sapatos/calcado2_zoom.png"
+      },
+      "economy": "R$ 19,98"
+    },
+    {
+      "name": "Tênis Ferracini Week",
+      "amount": "R$ 183,92",
+      "max_installments": "9X",
+      "old_amount": "R$ 229,90",
+      "price_installments": "R$ 20,43",
+      "images": {
+          "default": "images/sapatos/calcado3.png",
+          "hover": "images/sapatos/calcado3_hover.png",
+          "zoom": "images/sapatos/calcado3_zoom.png"
+      },
+      "economy": "R$ 45,98"
+    },
+    {
+      "name": "Tênis Democrata Fan",
+      "amount": "R$ 159,92",
+      "max_installments": "7X",
+      "old_amount": "R$ 219,90",
+      "price_installments": "R$ 22,84",
+      "images": {
+          "default": "images/sapatos/calcado4.png",
+          "hover": "images/sapatos/calcado4_hover.png",
+          "zoom": "images/sapatos/calcado4_zoom.png"
+      },
+      "economy": "R$ 59,98"
+    }
+  ]
+}

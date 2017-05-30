@@ -1,0 +1,24 @@
+footer .container {
+  display: flex;
+  justify-content: space-around; }
+
+footer .box-city {
+  display: flex; }
+
+footer .box-city .city-img {
+  margin-right: 10px; }
+
+footer .box-city .address p {
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+footer .box-city .address p:last-child {
+  font-weight: bold; }
+
+footer .contact-us {
+  margin-bottom: 10px; }
+
+footer .contact-us,
+footer .contact-online {
+  padding: 10px;
+  background-color: #fac437; }
