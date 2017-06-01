@@ -3,6 +3,23 @@ html, body {
   margin: 0;
   font-family: arial; }
 
+input[placeholder], [placeholder], *[placeholder] {
+  color: black !important; }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -75,15 +92,6 @@ html, body {
 
 .slick-arrow.slick-hidden {
   display: none; }
-
-input[placeholder], [placeholder], *[placeholder] {
-  color: black !important; }
-
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto; }
 
 header {
   height: 145px; }
@@ -164,12 +172,27 @@ header {
       color: #00aff0;
       font-size: 18px; }
 
+@media (max-width: 992px) {
+  header .container {
+    display: block;
+    align-items: initial;
+    justify-content: initial; }
+  header .logo-login {
+    align-items: center;
+    justify-content: space-around; }
+  header .brands-phone {
+    display: none; }
+  header .search {
+    margin-top: 20px; }
+  header input {
+    width: 100% !important;
+    border-radius: 0 !important; } }
+
 * {
   box-sizing: border-box; }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
   margin: auto; }
 
@@ -194,17 +217,14 @@ header {
   border-radius: 0 3px 3px 0; }
 
 .prev {
-  left: 0; }
+  left: -35px; }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px; }
+  border-radius: 3px 0 0 3px;
+  right: -35px; }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8); }
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -225,7 +245,25 @@ header {
 
 .banners {
   background-color: #fac437;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  position: relative; }
+  .banners .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none; }
+    .banners .dots .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0px 4px;
+      background-color: #d0d0d0; }
+      .banners .dots .dot.active {
+        background-color: #eaeaea; }
 
 .banners img {
   width: 100%;
@@ -266,91 +304,95 @@ header {
 
 .market {
   margin-bottom: 80px; }
+  .market h3 {
+    margin: 0;
+    font-size: 14px; }
+  .market .item {
+    border-right: 1px solid #e1e1e1;
+    padding: 5px 35px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .market .item:hover {
+      background-color: #fac437; }
+    .market .item:last-child {
+      border-right: none; }
+  .market .stars {
+    margin-top: 35px;
+    margin-bottom: 15px; }
+    .market .stars img {
+      margin-left: auto;
+      margin-right: auto; }
+  .market .price p {
+    margin: 0; }
+  .market .price p.de {
+    text-decoration: line-through;
+    color: #70716b;
+    font-size: 10px; }
+  .market .price p.por {
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 10px; }
+  .market .price p.or {
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 12px; }
+  .market .price p.or span {
+    font-weight: 600;
+    font-size: 14px; }
+  .market .buttons {
+    display: flex;
+    flex-direction: column; }
+  .market .btn-buy {
+    text-transform: uppercase;
+    background-color: #1c1c1c;
+    color: white;
+    border: 2px solid #2d2d2d;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .market .ico-market {
+    background-image: url(../images/icons/carrinho.png);
+    width: 20px;
+    background-size: contain;
+    height: 15px;
+    background-repeat: no-repeat;
+    display: inline-block; }
+  .market .slick-track {
+    width: 100%;
+    display: flex;
+    align-items: flex-end; }
+  .market .slick-control {
+    top: 30%; }
+    .market .slick-control.prev {
+      left: -50px; }
+    .market .slick-control.next {
+      right: -50px; }
+    .market .slick-control:hover {
+      background-color: initial; }
+  .market .arrow-left {
+    background-image: url(../images/icons/seta_esquerda_amarelo.png);
+    width: 20px;
+    background-size: contain;
+    height: 15px;
+    background-repeat: no-repeat;
+    display: inline-block; }
+  .market .arrow-right {
+    background-image: url(../images/icons/seta_direita_amarelo.png);
+    width: 20px;
+    background-size: contain;
+    height: 15px;
+    background-repeat: no-repeat;
+    display: inline-block; }
+  .market .economize {
+    border: 1px solid #c5c5c5;
+    background-color: white; }
 
-.market .item {
-  border-right: 1px solid #e1e1e1;
-  padding: 0px 35px;
-  text-align: center; }
-  .market .item:hover {
-    background-color: yellow; }
-
-.market .item:last-child {
-  border-right: none; }
-
-.market h3 {
-  margin: 0;
-  font-size: 14px; }
-
-.market .stars {
-  margin-top: 35px;
-  margin-bottom: 15px; }
-  .market .stars img {
-    margin-left: auto;
-    margin-right: auto; }
-
-.market .price p {
-  margin: 0; }
-
-.market .price p.de {
-  text-decoration: line-through;
-  color: #70716b;
-  font-size: 10px; }
-
-.market .price p.por {
-  font-weight: 600;
-  font-size: 12px;
-  margin-bottom: 10px; }
-
-.market .price p.or {
-  margin-bottom: 10px;
-  font-style: italic;
-  font-size: 12px; }
-
-.market .price p.or span {
-  font-weight: 600;
-  font-size: 14px; }
-
-.market .buttons {
-  display: flex;
-  flex-direction: column; }
-
-.market .btn-buy {
-  text-transform: uppercase;
-  background-color: #1c1c1c;
-  color: white;
-  border: 2px solid #2d2d2d;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-
-.market .ico-market {
-  background-image: url(../images/icons/carrinho.png);
-  width: 20px;
-  background-size: contain;
-  height: 15px;
-  background-repeat: no-repeat;
-  display: inline-block; }
-
-.arrow-left {
-  background-image: url(../images/icons/seta_esquerda_amarelo.png);
-  width: 20px;
-  background-size: contain;
-  height: 15px;
-  background-repeat: no-repeat;
-  display: inline-block; }
-
-.arrow-right {
-  background-image: url(../images/icons/seta_direita_amarelo.png);
-  width: 20px;
-  background-size: contain;
-  height: 15px;
-  background-repeat: no-repeat;
-  display: inline-block; }
-
-.market .economize {
-  border: 1px solid #c5c5c5;
-  background-color: white;
-  padding: 5px 0px; }
+@media (max-width: 992px) {
+  .market img {
+    width: 100%; } }
 
 footer .container {
   display: flex;
@@ -358,47 +400,17 @@ footer .container {
 
 footer .box-city {
   display: flex; }
-
-footer .box-city .city-img {
-  margin-right: 10px; }
-
-footer .box-city .address p {
-  margin-top: 0;
-  margin-bottom: 5px; }
-
-footer .box-city .address p:last-child {
-  font-weight: bold; }
+  footer .box-city .city-img {
+    margin-right: 10px; }
+  footer .box-city .address p {
+    margin-top: 0;
+    margin-bottom: 5px; }
+  footer .box-city .address p:last-child {
+    font-weight: bold; }
 
 footer .contact-us {
   margin-bottom: 10px; }
 
-footer .contact-us,
 footer .contact-online {
   padding: 10px;
   background-color: #fac437; }
-
-@media (max-width: 992px) {
-  header .container {
-    display: block;
-    align-items: initial;
-    justify-content: initial; }
-  header .logo-login {
-    align-items: center;
-    justify-content: space-around; }
-  header .brands-phone {
-    display: none; }
-  header .search {
-    margin-top: 20px; }
-  header input {
-    width: 100% !important;
-    border-radius: 0 !important; }
-  .market img {
-    width: 100%; } }
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px; } }
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px; } }

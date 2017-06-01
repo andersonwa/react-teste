@@ -82,13 +82,13 @@ class Index extends Component {
 
     return (
       <div className="App banners">
-        <div className="slideshow-container">
+        <div className="slideshow-container container">
           {this.renderItems()}
           <a className="prev" onClick={this.plusSlides.bind(this, -1)}>&#10094;</a>
           <a className="next" onClick={this.plusSlides.bind(this, 1)}>&#10095;</a>
         </div>
 
-        <div>
+        <div className="dots">
           {this.renderDots()}
         </div>
       </div>

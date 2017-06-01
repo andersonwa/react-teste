@@ -63,16 +63,13 @@ class Index extends Component {
     if (!products) {
       return null;
     }
-
+    console.log(products && products.length > 4);
     const settings = {
       dots: false,
-      infinite: products && products.length > 4,
+      infinite: true,
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
-      swipeToSlide: false,
-      accessibility: false,
-      touchMove: false,
       responsive: [
         { breakpoint: 768, settings: { slidesToShow: 3 } },
         { breakpoint: 1024, settings: { slidesToShow: 4 } }

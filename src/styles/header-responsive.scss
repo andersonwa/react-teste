@@ -1,0 +1,23 @@
+@media (max-width: 992px) {
+  header {
+    .container {
+      display: block;
+      align-items: initial;
+      justify-content: initial;
+    }
+    .logo-login {
+      align-items: center;
+      justify-content: space-around;
+    }
+    .brands-phone {
+      display: none;
+    }
+    .search {
+      margin-top: 20px;
+    }
+    input {
+      width: 100%!important;
+      border-radius: 0!important;
+    }
+  }
+}

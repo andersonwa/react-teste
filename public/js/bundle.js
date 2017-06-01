@@ -22155,7 +22155,7 @@
 	        { className: 'App banners' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'slideshow-container' },
+	          { className: 'slideshow-container container' },
 	          this.renderItems(),
 	          _react2.default.createElement(
 	            'a',
@@ -22170,7 +22170,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          null,
+	          { className: 'dots' },
 	          this.renderDots()
 	        )
 	      );
@@ -27576,16 +27576,13 @@
 	      if (!products) {
 	        return null;
 	      }
-
+	      console.log(products && products.length > 4);
 	      var settings = {
 	        dots: false,
-	        infinite: products && products.length > 4,
+	        infinite: true,
 	        speed: 500,
 	        slidesToShow: 4,
 	        slidesToScroll: 1,
-	        swipeToSlide: false,
-	        accessibility: false,
-	        touchMove: false,
 	        responsive: [{ breakpoint: 768, settings: { slidesToShow: 3 } }, { breakpoint: 1024, settings: { slidesToShow: 4 } }],
 	        prevArrow: _react2.default.createElement(PrevNavButton, null),
 	        nextArrow: _react2.default.createElement(NextNavButton, null)
@@ -30708,7 +30705,7 @@
 /* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -30719,6 +30716,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _city_address = __webpack_require__(241);
+
+	var _city_address2 = _interopRequireDefault(_city_address);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30738,86 +30739,40 @@
 	  }
 
 	  _createClass(Index, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "footer",
+	        'footer',
 	        null,
 	        _react2.default.createElement(
-	          "div",
-	          { className: "container" },
+	          'div',
+	          { className: 'container' },
+	          _react2.default.createElement(_city_address2.default, {
+	            image: 'images/icons/icone_rj.png',
+	            street: 'Rua do acre, 77 - sala 1108',
+	            city: 'Centro - Rio de Janeiro',
+	            phone: '+55 (21) 2263.6044' }),
+	          _react2.default.createElement(_city_address2.default, {
+	            image: 'images/icons/icone_sp.png',
+	            street: 'Rua Cardoso de melo, 1750',
+	            city: '6 Andar Vila Olimpio',
+	            phone: '+55 (21) 2263.6044' }),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "box-city" },
+	            'div',
+	            { className: 'contacts' },
 	            _react2.default.createElement(
-	              "div",
-	              { className: "city-img" },
-	              _react2.default.createElement("img", { src: "images/icons/icone_rj.png", alt: "" })
+	              'div',
+	              { className: 'contact-us' },
+	              _react2.default.createElement('img', { src: 'images/icons/icone_contato.png', alt: 'Ico' }),
+	              'Entre em contato'
 	            ),
 	            _react2.default.createElement(
-	              "div",
-	              { className: "address" },
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                "Rua do acre, 77 - sala 1108"
-	              ),
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                "Centro - Rio de Janeiro"
-	              ),
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                "tel.: +55 (21) 2263.6044"
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "box-city" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "city-img" },
-	              _react2.default.createElement("img", { src: "images/icons/icone_sp.png", alt: "" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "address" },
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                "Rua Cardoso de melo, 1750"
-	              ),
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                "6 Andar Vila Olimpia"
-	              ),
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                "tel.: +55 (21) 2263.6044"
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "contacts" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "contact-us" },
-	              _react2.default.createElement("img", { src: "images/icons/icone_contato.png", alt: "" }),
-	              "Entre em contato"
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "contact-online" },
-	              _react2.default.createElement("img", { src: "images/icons/icone_consultor.png", alt: "" }),
-	              "Fale com o nosso ",
-	              _react2.default.createElement("br", null),
-	              "Consultor online"
+	              'div',
+	              { className: 'contact-online' },
+	              _react2.default.createElement('img', { src: 'images/icons/icone_consultor.png', alt: 'Ico' }),
+	              'Fale com o nosso ',
+	              _react2.default.createElement('br', null),
+	              'Consultor online'
 	            )
 	          )
 	        )
@@ -30829,6 +30784,61 @@
 	}(_react.Component);
 
 	exports.default = Index;
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var CityAddress = function CityAddress(_ref) {
+	  var image = _ref.image,
+	      street = _ref.street,
+	      city = _ref.city,
+	      phone = _ref.phone;
+
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "box-city" },
+	    _react2.default.createElement(
+	      "div",
+	      { className: "city-img" },
+	      _react2.default.createElement("img", { src: image, alt: "Ico" })
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "address" },
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        street
+	      ),
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        city
+	      ),
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        "tel.: ",
+	        phone
+	      )
+	    )
+	  );
+	};
+
+	exports.default = CityAddress;
 
 /***/ })
 /******/ ]);

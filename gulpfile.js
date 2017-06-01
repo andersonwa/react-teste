@@ -19,6 +19,7 @@ gulp.task('serve', ['compile-sass', 'compile-js'], function() {
 gulp.task('compile-sass', function() {
   return gulp.src('src/styles/*.scss')
     .pipe(sass())
+    .on('error', swallowError)
     .pipe(gulp.dest('public/css/'))
     .pipe(browserSync.stream());
 });

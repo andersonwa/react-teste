@@ -1,31 +1,27 @@
-footer .container {
-  display: flex;
-  justify-content: space-around;
-}
+footer {
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .box-city {
+    display: flex;
 
-footer .box-city {
-  display: flex;
-}
-
-footer .box-city .city-img {
-  margin-right: 10px;
-}
-
-footer .box-city .address p {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-footer .box-city .address p:last-child {
-  font-weight: bold;
-}
-
-footer .contact-us {
-  margin-bottom: 10px;
-}
-
-footer .contact-us,
-footer .contact-online {
-  padding: 10px;
-  background-color: #fac437;
+    .city-img {
+      margin-right: 10px;
+    }
+    .address p {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .address p:last-child {
+      font-weight: bold;
+    }
+  }
+  .contact-us {
+    margin-bottom: 10px;
+  }
+  .contact-online {
+    padding: 10px;
+    background-color: #fac437;
+  }
 }

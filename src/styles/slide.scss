@@ -2,7 +2,6 @@
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
   margin: auto;
 }
@@ -31,19 +30,16 @@
 }
 
 .prev {
-  left: 0;
+  left: -35px;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
   border-radius: 3px 0 0 3px;
+  right: -35px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
 /* Caption text */
 .text {
@@ -67,6 +63,30 @@
 .banners {
   background-color: #fac437;
   margin-bottom: 20px;
+  position: relative;
+
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0px 4px;
+      background-color: #d0d0d0;
+
+      &.active {
+        background-color: #eaeaea;
+      }
+    }
+  }
 }
 
 .banners img {
